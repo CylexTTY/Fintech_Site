@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary-color fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white p-2 flex-grow-1" href="#"><i class="fas fa-user"></i> Olá, Lucas!</a>
+            <div class="nav-icon">
+                <a class="nav-link text-white align-self-end p-2" href="#"><i class="fas fa-bell"></i></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon p-2"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Receitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Despesas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Investimento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="header-section" class="bg-primary-color text-white pt-5">
+        <div class="container pt-5">
+            <div id="saldo-section">
+                <h2>Saldo</h2>
+                <p><strong>Saldo atual:</strong> R$ 3.145,00</p>
+                <div class="d-flex justify-content-between">
+                    <div class="box">
+                        <h3>Receitas</h3>
+                        <p>R$ 3.500,00</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h3>Despesas</h3>
+                        <p>R$ 355,00</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 pt-5 activities-section">
+        <h2 class="activities-title d-flex justify-content-between align-items-center">
+            Atividades
+            <button class="btn btn-primary" id="filter-btn">
+                <i class="fas fa-filter"></i> Filtro
+            </button>
+        </h2>
+        <div class="list-group">
+            <h5>Hoje 21/Jun</h5>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-utensils"></i> Burguer King - Crédito</span>
+                    <span class="badge bg-danger"><span>- R$ 35,00</span></span>
+                </div>
+                <div class="details">Data: 21/Jun | Hora: 12:00 | Tipo de pagamento: Crédito</div>
+            </div>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-briefcase"></i> Freelance - Pix</span>
+                    <span class="badge bg-success"><span>+ R$ 1.200,00</span></span>
+                </div>
+                <div class="details">Data: 21/Jun | Hora: 14:00 | Tipo de pagamento: Pix</div>
+            </div>
+            <h5>Terça 18/Jun</h5>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-prescription-bottle-alt"></i> Drogasil - Crédito</span>
+                    <span class="badge bg-danger"><span>- R$ 70,00</span></span>
+                </div>
+                <div class="details">Data: 18/Jun | Hora: 10:00 | Tipo de pagamento: Crédito</div>
+            </div>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-building"></i> Empresa XYZ - Pix</span>
+                    <span class="badge bg-success"><span>+ R$ 3.500,00</span></span>
+                </div>
+                <div class="details">Data: 18/Jun | Hora: 16:00 | Tipo de pagamento: Pix</div>
+            </div>
+            <h5>Quinta 30/Mai</h5>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-tools"></i> Mecânica Reiko - Débito</span>
+                    <span class="badge bg-danger"><span>- R$ 250,00</span></span>
+                </div>
+                <div class="details">Data: 30/Mai | Hora: 08:00 | Tipo de pagamento: Débito</div>
+            </div>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-shopping-cart"></i> Supermercado ABC - Débito</span>
+                    <span class="badge bg-danger"><span>- R$ 150,00</span></span>
+                </div>
+                <div class="details">Data: 30/Mai | Hora: 09:00 | Tipo de pagamento: Débito</div>
+            </div>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-bread-slice"></i> Padaria Pão Doce - Crédito</span>
+                    <span class="badge bg-danger"><span>- R$ 20,00</span></span>
+                </div>
+                <div class="details">Data: 30/Mai | Hora: 10:00 | Tipo de pagamento: Crédito</div>
+            </div>
+            <h5>Segunda 29/Mai</h5>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-utensils"></i> Restaurante XYZ - Crédito</span>
+                    <span class="badge bg-danger"><span>- R$ 45,00</span></span>
+                </div>
+                <div class="details">Data: 29/Mai | Hora: 11:00 | Tipo de pagamento: Crédito</div>
+            </div>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-bus"></i> Transporte - Débito</span>
+                    <span class="badge bg-danger"><span>- R$ 60,00</span></span>
+                </div>
+                <div class="details">Data: 29/Mai | Hora: 12:00 | Tipo de pagamento: Débito</div>
+            </div>
+            <h5>Domingo 28/Mai</h5>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-tshirt"></i> Loja de Roupas - Crédito</span>
+                    <span class="badge bg-danger"><span>- R$ 150,00</span></span>
+                </div>
+                <div class="details">Data: 28/Mai | Hora: 13:00 | Tipo de pagamento: Crédito</div>
+            </div>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-laptop"></i> Serviço Freelance - Pix</span>
+                    <span class="badge bg-success"><span>+ R$ 500,00</span></span>
+                </div>
+                <div class="details">Data: 28/Mai | Hora: 14:00 | Tipo de pagamento: Pix</div>
+            </div>
+            <h5>Sábado 27/Mai</h5>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-store"></i> Mercado Local - Débito</span>
+                    <span class="badge bg-danger"><span>- R$ 200,00</span></span>
+                </div>
+                <div class="details">Data: 27/Mai | Hora: 15:00 | Tipo de pagamento: Débito</div>
+            </div>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-prescription-bottle-alt"></i> Farmácia - Crédito</span>
+                    <span class="badge bg-danger"><span>- R$ 30,00</span></span>
+                </div>
+                <div class="details">Data: 27/Mai | Hora: 16:00 | Tipo de pagamento: Crédito</div>
+            </div>
+            <h5>Sexta 26/Mai</h5>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-gas-pump"></i> Gasolina - Débito</span>
+                    <span class="badge bg-danger"><span>- R$ 100,00</span></span>
+                </div>
+                <div class="details">Data: 26/Mai | Hora: 17:00 | Tipo de pagamento: Débito</div>
+            </div>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-money-bill-wave"></i> Pagamento Cliente - Pix</span>
+                    <span class="badge bg-success"><span>+ R$ 800,00</span></span>
+                </div>
+                <div class="details">Data: 26/Mai | Hora: 18:00 | Tipo de pagamento: Pix</div>
+            </div>
+            <h5>Quinta 25/Mai</h5>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-home"></i> Aluguel - Débito</span>
+                    <span class="badge bg-danger"><span>- R$ 1.000,00</span></span>
+                </div>
+                <div class="details">Data: 25/Mai | Hora: 19:00 | Tipo de pagamento: Débito</div>
+            </div>
+            <div class="list-group-item">
+                <div class="item-header">
+                    <span><i class="fas fa-laptop"></i> Consultoria - Pix</span>
+                    <span class="badge bg-success"><span>+ R$ 2.000,00</span></span>
+                </div>
+                <div class="details">Data: 25/Mai | Hora: 20:00 | Tipo de pagamento: Pix</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
