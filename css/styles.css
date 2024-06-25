@@ -1,21 +1,26 @@
 :root {
     --primary-color: #217b93;
     --background-color: #ffffff;
+    --primary-hover-color: #185c6d;
 }
 
 body {
     background-color: var(--background-color);
     color: var(--primary-color);
-    padding-top: 56px; /* Altura do navbar */
+    padding-top: 56px;
+    transition: all 0.3s ease;
 }
 
 .navbar {
     background-color: var(--primary-color);
-    padding: 0.5rem 1rem; /* Menos espesso na versão mobile */
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 }
 
-.nav-link, .navbar-brand {
+.nav-link,
+.navbar-brand {
     color: var(--background-color) !important;
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover {
@@ -24,41 +29,146 @@ body {
 
 .collapse.show {
     display: block !important;
+    transition: all 0.3s ease;
 }
 
 p {
     border-bottom: 1px solid #dee2e6;
     padding-bottom: 10px;
+    transition: all 0.3s ease;
 }
 
 h2 {
     color: var(--background-color);
 }
 
-#header-section {
-    background-color: var(--primary-color);
-    padding-top: 3rem; /* Reduzir a margem superior */
-    transition: all 0.3s ease; /* Transição suave */
-    transform-origin: top;
+h3 {
+    font-weight: 350;
 }
 
 h5 {
-    color: #000; /* Ajustar cor para preto */
+    color: #000;
+}
+
+#saldo-atual,
+#calc-receita,
+#calc-despesa {
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+#addRecordForm {
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+#addRecordForm label {
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+#addRecordForm input,
+#addRecordForm select {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.modal-title {
+    color: var(--background-color);
+}
+
+/* Estilos para o botão do formulário */
+#addRecordForm button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para o botão do formulário ao passar o mouse */
+#addRecordForm button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+#addRecordForm .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+#addRecordForm .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: none;
+
+}
+
+#addRecordForm .form-select {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+#addRecordForm .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+#addRecordForm .form-label {
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+#addRecordForm .form-label:focus {
+    color: var(--primary-color);
+}
+
+#addRecordForm .form-check-input {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+#addRecordForm .form-check-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+#header-section {
+    background-color: var(--primary-color);
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    transition: all 0.3s ease;
+    transform-origin: top;
 }
 
 .box {
     background-color: #f8f9fa;
-    color: #000; /* Cor do texto ajustada para melhor legibilidade */
+    color: #000;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 48%;
-    margin-bottom: 20px; /* Margem inferior maior */
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
 
 .progress {
     height: 10px;
     border-radius: 5px;
     margin-top: 5px;
+    transition: all 0.3s ease;
 }
 
 .progress-bar {
@@ -73,9 +183,11 @@ h5 {
     margin-bottom: 10px;
     background-color: #ffffff;
     position: relative;
-    transition: all 0.3s ease; /* Transição suave */
-    border: none; /* Remover borda */
-    border-bottom: 1px solid #dee2e6; /* Adicionar separador */
+    transition: all 0.3s ease;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 .list-group-item:hover {
@@ -114,19 +226,20 @@ h5 {
 .badge {
     font-size: 1em;
     padding: 10px;
-    border-radius: 5px;
-    width: 100px; /* Tamanho fixo */
+    border-radius: 8px;
+    min-width: 100px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: center;
     display: inline-block;
     line-height: 1.2;
+    transition: all 0.3s ease;
 }
 
 .badge span {
     display: block;
-    font-size: 0.8em; /* Ajuste a fonte para caber dentro da badge */
+    font-size: 0.8em;
 }
 
 .bg-success {
@@ -141,13 +254,49 @@ h5 {
     flex-grow: 0;
 }
 
-/* Ajustes para responsividade */
+/* Ajustes para menu responsivo */
 @media (max-width: 992px) {
     .navbar-nav {
-        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
     }
+
+    .navbar-nav.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .navbar-toggler {
         display: block;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-toggler span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-toggler span:nth-child(2) {
+        width: 20px;
+    }
+
+    .navbar-toggler.collapsed span:nth-child(2) {
+        opacity: 0;
     }
 }
 
@@ -155,31 +304,138 @@ h5 {
     .navbar-nav {
         display: flex !important;
     }
+
     .navbar-toggler {
         display: none;
     }
 }
 
-/* Adicionar a sombra à seção de atividades */
+/* Ajustes responsivos para badges em telas menores */
+@media (max-width: 767px) {
+    .badge {
+        padding: 6px;
+        min-width: 120px;
+    }
+
+    .list-group-item .item-header span {
+        font-size: 1em;
+    }
+}
+
+/* Adicionando sombra e arredondamento à seção de atividades */
 .activities-section {
     background-color: var(--background-color);
     padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    margin-top: 2rem;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -4rem;
+    z-index: 10;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 .activities-title {
-    color: #000; /* Ajustar a cor para preto */
+    color: #000;
 }
 
 #filter-btn {
     background-color: var(--primary-color);
     border: none;
     color: #fff;
+    transition: all 0.3s ease;
 }
 
 #filter-btn:hover {
-    background-color: #185c6d; /* Utilize um tom mais escuro de azul da variavel css predominante do site */
+    background-color: var(--primary-hover-color);
     cursor: pointer;
+}
+
+#float-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#float-button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+@media (min-width: 576px) {
+    #float-button {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+.btn-check:checked+.btn-outline-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-check:focus+.btn-outline-primary,
+.btn-outline-primary:focus {
+    box-shadow: none;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+/* Animação de fade-in para elementos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de fade-out para modal */
+.fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+#filter-section {
+    animation: slideDown 0.5s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
